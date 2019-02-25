@@ -14,12 +14,12 @@ try {
 			 * @return {date}
 			 */
 			window.getDate = function(callback) {
-				$.get('/jquery.getDate.txt', function(data, textStatus, jqXHR) {
-					//함수일 때
-					if(typeof callback === 'function') {
+				//함수일 때
+				if(typeof callback === 'function') {
+					$.get('/jquery.getDate.txt', function(data, textStatus, jqXHR) {
 						callback(new Date(jqXHR.getResponseHeader('Date')));
-					}
-				});
+					});
+				}
 			};
 		}else{
 			throw '제이쿼리가 없습니다.';
