@@ -15,7 +15,7 @@
 	window.getDate = function(callback) {
 		//함수일 때
 		if(typeof callback === 'function') {
-			$get('/jquery.getDate.txt', function(data, textStatus, jqXHR) {
+			$get('jquery.getDate.txt', function(data, textStatus, jqXHR) {
 				callback(new Date(jqXHR.getResponseHeader('Date')));
 			});
 		}
