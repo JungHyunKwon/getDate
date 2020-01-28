@@ -10,7 +10,7 @@
 	/**
 	 * @name getDate
 	 * @since 2018-12-14
-	 * @param {function} callback {date}
+	 * @param {function(date)} callback
 	 */
 	window.getDate = function(callback) {
 		//함수일 때
